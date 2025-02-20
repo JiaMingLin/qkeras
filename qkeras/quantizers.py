@@ -1295,6 +1295,7 @@ class quantized_bits(base_quantizer.BaseQuantizer):  # pylint: disable=invalid-n
     self.elements_per_scale = elements_per_scale
     self.min_po2_exponent = min_po2_exponent
     self.max_po2_exponent = max_po2_exponent
+    self.__name__ = "quantized_bits"
 
   def __str__(self):
     # Convert Tensors to printable strings by converting to a numpy array and
@@ -1678,6 +1679,7 @@ class ternary(base_quantizer.BaseQuantizer):  # pylint: disable=invalid-name
     self.default_threshold = 0.33
     self.number_of_unrolls = number_of_unrolls
     self.scale = None
+    self.__name__ = "ternary"
 
   def __str__(self):
     flags = []
@@ -2022,6 +2024,7 @@ class binary(base_quantizer.BaseQuantizer):  # pylint: disable=invalid-name
     self.elements_per_scale = elements_per_scale
     self.min_po2_exponent = min_po2_exponent
     self.max_po2_exponent = max_po2_exponent
+    self.__name__ = "binary"
 
   def __str__(self):
     def list_to_str(l):
